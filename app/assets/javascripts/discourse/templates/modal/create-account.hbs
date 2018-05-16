@@ -86,6 +86,12 @@
 
           </table>
 
+          {{plugin-outlet name="create-account-after-password"
+                          args=(hash accountName=accountName
+                                     accountUsername=accountUsername
+                                     accountPassword=accountPassword
+                                     userFields=userFields)}}
+
           {{#if userFields}}
             <div class='user-fields'>
               {{#each userFields as |f|}}
